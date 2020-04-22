@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>co.marcin.caversia</groupId>
+    <artifactId>runestones</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>Runestones</name>
+
+    <parent>
+        <artifactId>risecore-parent</artifactId>
+        <groupId>me.travja</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../RiseCore Parent/pom.xml</relativePath>
+    </parent>
+    <build>
+        <finalName>${project.name}-${project.version}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>shade</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <artifactSet>
+                                <includes>
+                                    <include>de.tr7zw:item-nbt-api</include>
+                                </includes>
+                            </artifactSet>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <relocations>
+                        <relocation>
+                            <pattern>de.tr7zw.changeme.nbtapi</pattern>
+                            <shadedPattern>apis.nbt</shadedPattern>
+                        </relocation>
+                    </relocations>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <!-- Particle Effect Repo -->
+        <repository>
+            <id>sinndev-repo</id>
+            <url>http://repo.sinndev.com/content/groups/public/</url>
+        </repository>
+        <repository>
+            <id>codemc-repo</id>
+            <url>https://repo.codemc.org/repository/maven-public/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.gotofinal</groupId>
+            <artifactId>economy</artifactId>
+            <version>1.0-Travja</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>me.travja</groupId>
+            <artifactId>risecore</artifactId>
+            <version>${rc.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.md-5</groupId>
+            <artifactId>bungeecord-api</artifactId>
+            <version>1.15-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>de.tr7zw</groupId>
+            <artifactId>item-nbt-api</artifactId>
+            <version>2.3.0</version>
+        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>com.darkblade12</groupId>-->
+        <!--            <artifactId>particleeffect</artifactId>-->
+        <!--            <version>1.7</version>-->
+        <!--            <scope>compile</scope>-->
+        <!--        </dependency>-->
+    </dependencies>
+
+</project>

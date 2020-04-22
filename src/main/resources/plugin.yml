@@ -1,0 +1,8 @@
+name: RuneStones
+main: co.marcin.caversia.runestones.RuneStonesPlugin
+version: 1.0
+api-version: 1.13
+author: Marcin Wieczorek
+authors:
+  - Travja
+depend: [Economy]

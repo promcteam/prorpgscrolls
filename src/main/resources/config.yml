@@ -1,0 +1,31 @@
+# RuneStones configuration file
+# Marcin Wieczorek 2017
+
+bungee: true
+bungee_id: server_name
+
+#items
+item:
+  unmarked: runestone_unmarked
+  marked: runestone
+
+# time to mark runestone
+warmup: 10
+
+# time before being able to mark another runestone (in seconds)
+cooldown:
+  mark: 10
+  teleport: 10
+
+effectradius: 100
+
+messages:
+  wait:
+    mark: "You need to wait %0 seconds before marking another runestone."
+    teleport: "You need to wait %0 seconds before teleporting again"
+  marking: "Marking in progress"
+  marked: "You successfully marked a runestone!"
+  moved: "You've moved!"
+  teleported: "You have been teleported."
+  noperm: "You have no power here!"
+  notone: "You can only mark one runestone at once!"
