@@ -6,13 +6,13 @@ bungee_id: server_name
 
 #items
 item:
-  unmarked: runestone_unmarked
-  marked: runestone
+  unmarked: scroll_unmarked
+  marked: scroll
 
-# time to mark runestone
+# time to mark scroll
 warmup: 10
 
-# time before being able to mark another runestone (in seconds)
+# time before being able to mark another scroll (in seconds)
 cooldown:
   mark: 10
   teleport: 10
@@ -21,11 +21,11 @@ effectradius: 100
 
 messages:
   wait:
-    mark: "You need to wait %0 seconds before marking another runestone."
+    mark: "You need to wait %0 seconds before marking another scroll."
     teleport: "You need to wait %0 seconds before teleporting again"
   marking: "Marking in progress"
-  marked: "You successfully marked a runestone!"
+  marked: "You successfully marked a scroll!"
   moved: "You've moved!"
   teleported: "You have been teleported."
   noperm: "You have no power here!"
-  notone: "You can only mark one runestone at once!"
+  notone: "You can only mark one scroll at once!"

@@ -4,7 +4,7 @@ import net.md_5.bungee.api.plugin.Plugin;
 
 public class RunestonesBungee extends Plugin {
 
-    public static final String CHANNEL = "darkrise:runestones";
+    public static final String CHANNEL = "darkrise:scrolls";
 
     private static RunestonesBungee instance;
 

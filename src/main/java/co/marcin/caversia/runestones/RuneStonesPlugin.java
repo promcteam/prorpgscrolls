@@ -37,7 +37,7 @@ public class RuneStonesPlugin extends JavaPlugin implements Listener {
 
     public static boolean IS_BUNGEE = false;
     public static String BUNGEE_ID;
-    public static final String CHANNEL = "darkrise:runestones";
+    public static final String CHANNEL = "darkrise:scrolls";
 
     @Override
     public void onEnable() {
@@ -142,7 +142,7 @@ public class RuneStonesPlugin extends JavaPlugin implements Listener {
         event.setCancelled(true);
 
         if (marked) { //Teleporting
-            if (!player.hasPermission("runestones.use")) {
+            if (!player.hasPermission("scrolls.use")) {
                 new Message("noperm").send(player);
             }
 
@@ -165,7 +165,7 @@ public class RuneStonesPlugin extends JavaPlugin implements Listener {
                 BungeeUtil.sendMessage(RuneStonesPlugin.CHANNEL, player, "RunestoneTP", runestone.get().getServer(), player.getName(), runestone.get().getLocString());
             }
         } else { //Marking
-            if (!player.hasPermission("runestones.mark")) {
+            if (!player.hasPermission("scrolls.mark")) {
                 new Message("noperm").send(player);
             }
 
